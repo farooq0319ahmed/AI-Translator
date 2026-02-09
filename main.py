@@ -28,7 +28,7 @@ btn = st.button("Translate")
 
 if btn and text:
     try:
-        model = genai.GenerativeModel('google/gemma-3-27b-it:free')
+        model = genai.GenerativeModel('gemini-1.5-pro')
         prompt = f"Translate the following text to {lang}:\n\n{text}"
         response = model.generate_content(prompt)
         st.success(f"✅ Translated to {lang}:")
